@@ -35,7 +35,8 @@ def test_auth(client):
                            data=json.dumps(body),
                            content_type='application/json')
 
-    assert response.status_code == 400  #200
+    assert response.status_code == 200  #200
     token = response.json['token']
-    assert False
+    assert token is not None
     #token is not None
+# deployement failed when changing test result
